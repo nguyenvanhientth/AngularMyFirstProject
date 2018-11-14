@@ -10,7 +10,7 @@ import { Name } from '../name';
 export class ListNameComponent implements OnInit {
   arrName = ListName;
   selectedName: Name;
-
+  
   constructor() { }
   ngOnInit() {
   }
