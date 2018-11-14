@@ -1,0 +1,23 @@
+<h2>My Details</h2>
+<ul class="listname">
+  <li *ngFor = "let name of arrName" [class.selected]="name === selectedName" (click)="onSelect(name)">
+    <span class="item">
+      {{name.id}}
+    </span>
+    {{name.name}}
+  </li>
+</ul>
+<div *ngIf="selectedName" id="detail">
+  <h2>
+    {{selectedName.name | uppercase}} Details 
+  </h2>
+  <div>
+    <span>id: </span>{{selectedName.id}}
+  </div>
+  <div>
+    <label>name: 
+      <input [(ngModel)] = "selectedName.name" placeholder="name" >
+    </label>
+  </div>
+</div>
+  
